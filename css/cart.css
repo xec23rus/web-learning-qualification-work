@@ -1,0 +1,114 @@
+#cartListProd table {
+	width: 100%;
+}
+#cartListProd table td {
+	border-bottom: 2px solid #f6f6f6;
+}
+#cartListTitle td {
+	font-size: 14px;
+	font-weight: 300;
+	color: #999999;
+	height: 76px;
+}
+.cartListImg {
+	width: 170px;
+	height: 138px;
+	text-align: center;
+}
+.cartListName {
+	width: 295px;
+	padding-left: 30px;
+	font-size: 18px;
+	font-weight: 300;
+	color: #555555;	
+}
+.cartListPos {
+	width: 123px;
+	font-size: 14px;
+	font-weight: 300;
+	color: #ed1651;
+}
+.cartListPrice {
+	width: 126px;
+	font-size: 18px;
+	font-weight: 300;
+	font-style: italic;
+	color: #5d5d5d;	
+}
+.cartListCount {
+	width: 236px;
+}
+.cartListSum {
+	width: 134px;
+	font-size: 18px;
+	font-weight: 700;
+	font-style: italic;
+	color: #000;
+}
+#cartListTitleProd {
+	padding-left: 30px;
+}
+.cartListDel img, .cartListCountMinus, .cartListCountPlus {
+	cursor: pointer;
+}
+.cartListCountChange {
+	width: 140px;
+	height: 47px;
+}
+.cartListCountChange div {
+	float: left;
+	height: 47px;
+	background-color: #e9e9e9;
+	line-height: 47px;
+}
+.cartListCountMinus, .cartListCountPlus {
+	width: 40px;
+	border: 0;
+	font-size: 18px;
+	color: #999999;
+}
+.cartListCountRes {
+	width: 56px;	
+	border-left: 2px solid #dadada;
+	border-right: 2px solid #dadada;
+	font-size: 16px;
+}
+/*		блок под таблицей		*/
+#cartBack, #cartOut {
+	width: 585px;
+	height: 162px;
+	float: left;
+
+}
+#outBackBtn {
+	width: 190px;
+	height: 44px;
+	border: 0;
+	background-color: #000;
+	margin: 83px 0 0 31px;
+	font-size: 14px;
+	font-weight: 300;
+	color: #fff;
+}
+#cartOut table {
+	margin: 25px 48px 19px auto;
+	font-size: 24px;
+	font-weight: 700;
+	font-style: italic;
+}
+#cartResSum{
+	width: 205px;
+	font-size: 29px;
+}
+#outBtn {
+	width: 292px;
+	height: 49px;
+	font-size: 20px;
+	font-weight: 700;
+}
+#cartOut{
+	text-align: right;
+}
+#cartOut a{
+	margin-right: 49px;
+}

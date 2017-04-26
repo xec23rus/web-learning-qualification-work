@@ -1,0 +1,141 @@
+/*		вынести!!!		*/
+#winNameN {
+	width: 1170px;
+	font-size: 72px;
+	font-style: italic;
+	font-weight: 300;
+	text-transform: uppercase;
+	line-height: 60px;
+	margin: 0 auto;	
+	margin-top: 45px;
+}
+#winNameN {
+	font-weight: 100;
+}
+#winSummary {
+	width: 1170px;
+	font-size: 14px;
+	font-weight: 300;
+	color: #999999;
+	text-transform: uppercase;
+	margin: 0 auto;	
+	margin-top: 13px;
+}
+#head {
+	height: 147px;
+}
+/*		выше		*/
+#mainForm {
+	margin-top: 21px;
+}
+/*		навигация по списку продуктов		*/
+.categoryNav {
+	height: 76px;
+	padding-right: 30px;
+}
+.listOfPage li {
+	float: right;
+	margin-top: 24px;
+}
+.blankBtn, .pageGreyBtn, .pageRedBtn {
+	width: 30px;
+	height: 30px;
+	border: none;
+	margin-left: 8px;
+	background-color: #e9e9e9;
+	color: #333333;
+}
+.blankBtn {
+	width: 68px;
+	background: none;
+	cursor: inherit;
+	padding: 0;
+}
+.blankBtn span {
+	font-weight: 300;
+	font-size: 14px;
+}
+.pageRedBtn {
+	background-color: #ed1651;
+	color: #fff;
+	font-size: 14px;
+	cursor: inherit;
+}
+.pageGreyBtn {
+	font-size: 12px;
+}
+/*		список продуктов		*/
+#cat1main {
+	width: 877px;
+	height: 324px;
+	background-image: url(../img/cat1main.jpg);
+	position: relative;
+}
+#catDesc, #catAbout {
+	position: absolute;
+	left: 42px;
+}
+#catDesc {
+	font-size: 38px;
+	font-style: italic;
+	top: 71px;
+	text-transform: uppercase;
+}
+#catAbout {
+	font-size: 14px;
+	font-weight: 300;
+	top: 120px;
+}
+#cat1main, [data-product], #cat1promo, #leftPromo {
+	float: left;
+}
+#leftPromo {
+	width: 584px;
+	height: 650px;
+}
+#cat1promo {
+	width: 586px;
+	height: 650px;
+	position: relative;
+	background-image: url(../img/cat1promo.jpg);
+}
+#cat1promo p, #cat1promo a {
+	position: absolute;
+	left: 48px;
+}
+#promoName {
+	font-size: 36px;
+	font-style: italic;
+	font-weight: 700;
+	top: 49px;
+	text-transform: uppercase;
+	line-height: 36px;
+}
+#promoDesc {
+	font-size: 14px;
+	font-weight: 300;
+	color: #555555;
+	top: 138px;
+}
+#promoPrice {
+	font-size: 36px;
+	font-style: italic;
+	font-weight: 700;
+	color: #ed1651;
+	top: 230px;
+}
+#promoPrice span {
+	font-size: 30px;
+}
+#cat1promo a {
+	top: 284px;
+}
+#cat1promo button {
+	width: 173px;
+	height: 51px;
+	background: none;
+	border: 3px solid #ed1651;
+	font-size: 18px;
+	font-style: italic;
+	white-space: pre;
+}

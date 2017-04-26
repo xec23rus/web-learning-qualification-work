@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Спорт Маг</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<link rel="stylesheet" type="text/css" href="css/autent.css">
+</head>
+<body>
+	<div id="wrp">
+		<div id="head">
+			<div id="logo">
+				<a class="refBox" name="top" href="index.html"><h1>SPORT <span>SHOP</span></h1></a>
+			</div>
+			<div id="menu">
+				<ul id="nav">
+					<li><a class="refBox" href="category.html">КАТЕГОРИЯ 1</a></li>
+					<li><a class="refBox" href="category.html">КАТЕГОРИЯ 2</a></li>
+					<li><a class="refBox" href="category.html">КАТЕГОРИЯ 3</a></li>
+					<li><a class="refBox" href="category.html">КАТЕГОРИЯ 4</a></li>
+				</ul>
+				<ul id="usr">
+					<li><a href="reg.html">Регистрация</a></li>
+					<li> <img src="img/usr_icon.png" align="left"> <a class="ent" href="#">Войти</a></li>
+				</ul>
+			</div>
+			<div id="line"></div>
+			<div id="cart">
+				<img id="cart_img" src="img/cart.png">
+				<a class="refBox" href="cart.html"></a>
+				<p id="cart_sum">43 275 <span>руб.</span></p>
+				<p id="cart_item">2 предмета</p>
+				
+			</div>
+			<div id="winName">
+				Вход
+			</div>
+		</div>
+		<div id="body">
+			<div id="mainForm">
+				<div id="loginForm">
+					<form action="" method="post">
+						<h3>Зарегистрированный пользователь</h3>
+						<p class="loginDsc">Email адрес:</p>
+						<input class="loginField" type="Email" name="email" autofocus required autocomplete="on" pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})" title="name@domain.com" placeholder="E-mail">
+						<p class="loginDsc">Пароль:</p>
+						<input class="loginField" type="password" name="pas" required>
+						<input id="loginBtn" type="submit" value="Войти">
+						<a href="#">Забыли пароль?</a>
+					</form>
+				</div>
+				<div id="regForm">
+					<h3>Новый пользователь</h3>
+					<form action="reg.html" method="post">
+						<input id="regBtn" class="redBtn" type="submit" value="Зарегистрироваться">
+					</form>
+				</div>
+			</div>
+		</div>
+		<div id="footer">
+			<p>Шаблон для экзаменационного задания.<br>
+			Разработан специально для «Всероссийской Школы Программирования»<br>
+			http://bedev.ru/</p>
+			<a href="#top">Наверх <img src="img/up.png"></a>
+		</div>
+		<div id="footerNull"></div>
+	</div>
+</body>
+</html>

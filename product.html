@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Спорт Маг</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<link rel="stylesheet" type="text/css" href="css/product.css">
+</head>
+<body>
+	<div id="wrp">
+		<div id="head">
+			<div id="logo">
+				<a class="refBox" href="index.html"><h1>SPORT <span>SHOP</span></h1></a>
+			</div>
+			<div id="menu">
+				<ul id="nav">
+					<li><a class="refBox" href="category.html">КАТЕГОРИЯ 1</a></li>
+					<li><a class="refBox" href="category.html">КАТЕГОРИЯ 2</a></li>
+					<li><a class="refBox" href="category.html">КАТЕГОРИЯ 3</a></li>
+					<li><a class="refBox" href="category.html">КАТЕГОРИЯ 4</a></li>
+				</ul>
+				<ul id="usr">
+					<li><a href="reg.html">Регистрация</a></li>
+					<li> <img src="img/usr_icon.png" alt="user_icon"> <a class="ent" href="login.html">Войти</a></li>
+				</ul>
+			</div>
+			<div id="line"></div>
+			<div id="cart">
+				<img id="cart_img" src="img/cart.png" alt="cart">
+				<a class="refBox" href="cart.html"></a>
+				<p id="cart_sum">43 275 <span>руб.</span></p>
+				<p id="cart_item">2 предмета</p>
+				
+			</div>
+		</div>
+		<div id="body">
+			<div id="winNameN">Категория 1</div>
+			<div id="winSummary"><a href="category.html">Вернуться в каталог</a></div>	
+			<div id="mainForm">
+				<div id="productImg">
+					<div id="bigImg">
+						<div id="magnifierImg"></div>
+					</div>
+					<div id="prodImgList">
+						<div id="prodImgListPrev"></div>
+						<ul>
+							<li data-prevImg="1"></li>
+							<li data-prevImg="A"></li>
+							<li data-prevImg="3"></li>
+							<li data-prevImg="4"></li>
+						</ul>
+						<div id="prodImgListNext"></div>
+						<div class="clear"></div>													
+					</div>
+				</div>
+				<div id="productDesc">
+					<div id="productName">
+						<h1>Название товара</h1>
+					</div>
+					<p id="productDescVal">Описание товара</p>
+					<p id="productAttr">
+						Выберите вариант:
+						<select size="1" name="productAttrVal">
+							<option value="36">размер 36</option>
+							<option value="37">размер 37</option>
+							<option value="38">размер 38</option>
+							<option value="39">размер 39</option>
+						</select>
+					</p>
+				</div>
+				<div id="productPrice">
+					<div id="productPriceMain">
+						<div id="oldPrice">9 999 руб.</div>
+						<div id="curPrice">4 999руб.</div>
+						<table id="inStock">
+							<tr>
+								<td><img src="img/in_stock.png" alt=""></td>
+								<td><span>есть в наличии</span></td>
+							</tr>
+						</table>
+					</div>
+					<div id="productPriceBut">
+						<table class="redBtn buyBtn">
+							<tr>
+								<td id="cartImgField">
+									<img src="img/cart_white.png" alt="">
+								</td>
+								<td>
+									<span>Купить</span>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<div id="addInfo">
+						<table>
+							<tr id="deliveryPres">
+								<td class="addInfoImg"><img src="img/delivery.png" alt=""></td>
+								<td><span><b>Бесплатная доставка</b><br>по всей России</span></td>
+							</tr>
+							<tr id="supportPres">
+								<td class="addInfoImg"><img src="img/support.png" alt=""></td>
+								<td><span><b>Горячая линия</b><br>8 800 000-00-00</span></td>
+							</tr>
+							<tr id="presentPres">
+								<td class="addInfoImg"><img src="img/present.png" alt=""></td>
+								<td><span><b>Подарки</b><br>каждому покупателю</span></td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>	
+			<div id="mainFormSameProd">
+				<div id="sameProdNav">
+					<p>Другие товары из категории «Категория 1»</p>
+					<div id="sameProdNavRight" class="NavBtn">
+						<a class="refBox" href="#"><img src="img/list_btn_black_right.png"></a>
+					</div>
+					<div id="sameProdNavLeft" class="NavBtn">
+						<a class="refBox" href="#"><img src="img/list_btn_grey_left.png"></a>
+					</div>
+				</div>
+				<div id="sameProdList">
+					<div class="tBorder rBorder" data-product="1">
+						<div class="ProdImg"><img src="img/product.jpg"></div>
+						<div class="ProdName">Название товара</div>
+						<div class="ProdPrice">7 258<span>руб.</span></div>
+						<a class="refBox" href="#"></a>						
+					</div>		
+					<div class="tBorder rBorder" data-product="2">
+						<div class="ProdImg"><img src="img/product.jpg"></div>
+						<div class="ProdName">Название товара</div>
+						<div class="ProdPrice">7 258<span>руб.</span></div>
+						<a class="refBox" href="#"></a>	
+						<div class="NewLabel">NEW</div>					
+					</div>
+					<div class="tBorder rBorder" data-product="3">
+						<div class="ProdImg"><img src="img/product.jpg"></div>
+						<div class="ProdName">Название товара</div>
+						<div class="ProdPrice">7 258<span>руб.</span></div>
+						<a class="refBox" href="#"></a>	
+						<div class="HotLabel">HOT</div>					
+					</div>		
+					<div class="tBorder" data-product="4">
+						<div class="ProdImg"><img src="img/product.jpg"></div>
+						<div class="ProdName">Название товара</div>
+						<div class="ProdPrice">7 258<span>руб.</span></div>
+						<a class="refBox" href="#"></a>						
+					</div>	
+					<div class="clear"></div>
+				</div>				
+			</div>
+		</div>
+		<div id="footer">
+			<p>Шаблон для экзаменационного задания.<br>
+			Разработан специально для «Всероссийской Школы Программирования»<br>
+			http://bedev.ru/</p>
+			<a href="#top">Наверх <img src="img/up.png" alt="up"></a>
+		</div>
+		<div id="footerNull"></div>
+	</div>
+</body>
+</html>		

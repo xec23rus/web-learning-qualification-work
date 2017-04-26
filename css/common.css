@@ -1,0 +1,329 @@
+@import url(reset.css);
+@import url(fonts.css);
+
+.clear {
+	clear: both;
+}
+.refBox {
+	display: block;
+	width: inherit;
+	height: inherit;
+	text-decoration: none;
+	text-align: center;
+}
+#wrp {
+	width: 1400px;
+	outline: 0px solid #000000;
+	margin: 0 auto;
+	background-color: #dee1e3;
+}
+#wrp, button span {
+	font-family: Supermolot, sans-serif;
+	font-weight: 400;	
+}
+#head {
+	height: 272px;
+	position: relative;
+ }
+#wrp a, button {
+	cursor: pointer;
+}
+ #logo {
+ 	width: 170px;
+ 	height: 120px;
+ 	position: absolute;
+ 	left: 115px;
+ 	top: 27px;
+ 	background-color: #ed1651;
+ }
+
+ #logo a {
+ 	color: #ffffff;
+ 	font-size: 33px;
+ 	line-height: 31px;
+ 	padding-top: 25px;
+ 	height: 95px;
+ }
+
+ #logo a span {
+ 	font-size: 41px;
+ 	font-weight: bold;
+ }
+
+ #menu {
+ 	width: 1000px;
+ 	height: 60px;	
+ 	position: absolute;
+ 	left: 285px;
+ 	top: 27px;
+ 	outline: 0px solid green;
+ 	background-color: #ffffff;
+ }
+
+ #nav {
+ 	font-size: 14px;
+ 	list-style-type: none;
+ 	padding: 0px;
+ 	margin: 0px;
+ }
+
+ #nav li {
+ 	float: left;
+ 	height: 60px;
+ 	width: 130px;
+ 	outline: 0px solid green;
+ 	margin-left: 0px;
+ }
+
+ #nav li a { 
+ 	color: #000000;
+ 	height: 38px;
+ 	outline: 0px solid black;
+ 	padding-top: 22px;
+ 	position: absolute;
+ }
+
+ #nav li a:hover {
+ 	color: #ffffff;
+ 	background-color: #021563;
+ 	z-index: 6;
+ }
+
+ #line {
+ 	width: 863px;
+ 	height: 2px;
+ 	background-color: #f1f1f1;
+ 	position: absolute;
+ 	left: 285px;
+ 	top: 85px;
+ 	z-index: 5;
+ }
+
+ #usr {
+ 	font-size: 14px;
+ 	font-weight: 300;
+ 	list-style-type: none;
+ 	margin-top: 21px;
+ 	margin-right: 14px;
+ }
+
+ #usr li {
+ 	float: right;
+ 	height: 39px;
+ 	outline: 0px solid green;
+ 	margin-left: 9px;
+ }
+
+ #usr li a {
+ 	display: block;
+ 	float: right;
+ 	height: 16px;
+ 	text-decoration: none;
+ 	border-bottom: 1px dashed #333333;
+ 	color: #333333;
+ 	margin-left: 8px;
+ }
+
+  #usr li a.ent {
+ 	text-decoration: none;
+ 	border-bottom: 1px dashed #ed1651;
+ 	color: #ed1651;
+ }
+ /*		корзина		*/
+ #cart {
+ 	width: 188px;
+ 	height: 60px;
+ 	background-color: #021563;
+ 	position: absolute;
+ 	right: 115px;
+ 	top: 87px;
+ }
+ #cart_img {
+ 	display: block;
+ 	position: absolute;
+ 	top: 12px;
+ 	right: 14px;
+ }
+ #cart a {
+ 	position: absolute;
+ 	outline: 0px solid green;
+ }
+ #cart_sum {
+ 	font-size: 20px;
+ 	font-weight: 700;
+ 	color: #fff;
+ 	padding-left: 18px;
+ 	padding-top: 9px;
+ }
+  #cart_sum span {
+ 	font-size: 14px;
+ 	font-weight: 400;
+ 	color: #fff;
+ }
+  #cart_item {
+ 	font-size: 12px;
+ 	font-weight: 400;
+ 	color: #999999;
+ 	padding-left: 20px;
+ 	line-height: 12px;
+ }
+/*		Название категории		*/
+#winName {
+	position: absolute;
+	top: 175px;
+	left: 116px;
+	font-size: 72px;
+	font-style: italic;
+	font-weight: 300;
+	text-transform: uppercase;
+}
+/*		основная форма		*/
+#mainForm, #mainFormSameProd {
+	width: 1170px;
+	background-color: #fff;
+ 	box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+ 	margin: 0 auto;
+}
+/*		подвал		*/
+#footer {
+	width: 1170px;
+	height: 59px;
+	margin: 0 auto;
+	margin-top: 38px;
+	background-color: #01104c;
+	position: relative;
+}
+#footer p {
+	font-size: 11px;
+	font-weight: 300;
+	line-height: 13px;
+	color: #999999;
+	padding: 10px 0 0 20px;
+}
+#footer a {
+	display: block;
+	text-decoration: none;
+	position: absolute;
+	right: 28px;
+	top: 19px;
+	font-weight: 300;
+	font-size: 16px;
+	color: #fff; 
+}
+#footerNull {
+	height: 1px;
+	visibility: none;
+	margin-top: 38px;
+}
+/*		красные кнопки		*/
+.redBtn {
+	height: 47px;
+	background-color: #ed1651;
+	border: 0;
+	font-size: 18px;
+	font-weight: 300;
+	color: #fff;
+	cursor: pointer;	
+	font-family: Supermolot, sans-serif;
+}
+/*		формы с данными		*/
+.fontInForm {
+	padding-left: 18px;
+	font-size: 16px;
+	font-weight: 300;
+	color: #000;	
+}
+.styleOfForm {
+	height: 47px;
+	border: 0;
+	background-color: #e9e9e9;
+}
+/*		рамки		*/
+.tBorder {
+	border-top: 2px solid #f6f6f6;
+}
+.lBorder {
+	border-left: 2px solid #f6f6f6;
+}
+.rBorder {
+	border-right: 2px solid #f6f6f6;
+}
+.bBorder {
+	border-bottom: 2px solid #f6f6f6;
+}
+/*		превью продуктов		*/
+[data-product] {
+	width: 291px;
+	height: 322px;
+	position: relative;
+}
+[data-product] a {
+	opacity: 0;
+	position: absolute;
+	z-index: 999;	
+}
+.ProdImg {
+	width: 291px;
+	height: 235px;
+	position: absolute;
+}
+.ProdName {
+	margin: 30px 0 0 31px;
+	position: absolute;
+	top: 235px;
+	font-size: 14px;
+	color: #555555;
+}
+.ProdPrice {
+	margin: 30px 31px 0 0;
+	position: absolute;
+	top: 235px;
+	right: 0px;
+	font-size: 18px;
+	font-style: italic;
+	font-weight: 300;
+	color: #ed1651;
+}
+.ProdPrice span {
+	font-size: 15px;
+}
+/*		ярлыки к продуктам		*/
+ .NewLabel {
+ 	width: 41px;
+ 	height: 40px;
+ 	position: absolute;
+ 	left: 0;
+ 	top: 0;
+ 	background-image: url(../img/new.png);
+ 	font-size: 9px;
+ 	font-style: italic;
+ 	font-weight: 700;
+ 	color: #fff;
+ 	padding: 6px 0 0 5px;
+ }
+ .HotLabel {
+ 	width: 41px;
+ 	height: 40px;
+ 	position: absolute;
+ 	left: 0;
+ 	top: 0;
+ 	background-image: url(../img/hot.png);
+ 	font-size: 9px;
+ 	font-style: italic;
+ 	font-weight: 700;
+ 	color: #000;
+ 	padding: 6px 0 0 5px;
+ }
+ .SaleLabel {
+ 	width: 41px;
+ 	height: 40px;
+ 	position: absolute;
+ 	left: 0;
+ 	top: 0;
+ 	background-image: url(../img/sale.png);
+ 	font-size: 9px;
+ 	font-style: italic;
+ 	font-weight: 700;
+ 	color: #fff;
+ 	padding: 6px 0 0 5px;
+ }

@@ -1,0 +1,74 @@
+#mainForm h3 {
+	font-size: 24px;
+	font-weight: 700;
+	font-style: italic;
+	margin: 23px 0 3px 0;
+}
+#mainForm h4 {
+	font-size: 14px;
+	font-weight: 300;
+	color: #999999;
+	padding: 15px 0 7px 0;
+}
+.accountAddrApp {
+	width: 238px;
+	height: 110px;
+	float: left;
+}
+.AccFormWidth {
+	width: 504px;
+}
+.AccFormWidthApp {
+	width: 220px;
+}
+#accountInfoForm, #orders {
+	padding-left: 30px;
+	width: 553px;
+	float: left;
+}
+#accountAddrAppM {
+	margin-left: 46px;
+}
+#saveBtn {
+	width: 134px;
+	margin: 34px 0 40px 30px;
+}
+#orders {
+	border-left: 2px solid #f6f6f6;
+	padding-bottom: 20px;
+}
+.accountOrdInfo {
+	width: 150px;
+	height: 96px;
+	vertical-align: top;
+	padding-left: 2px;
+}
+.accountOrdStatus {
+	width: 380px;
+	text-align: right;
+	vertical-align: top;
+}
+.accountOrdN {
+	font-size: 24px;
+	font-weight: 300;
+	line-height: 25px;
+}
+.accountOrdSum {
+	font-size: 17px;
+	font-weight: 300;
+}
+.accountOrdDate {
+	font-size: 12px;
+	font-weight: 300;
+	color: #999999;	
+	line-height: 18px;
+}
+.accountOrdStatus {
+	font-size: 36px;
+	font-weight: 300;
+	color: #ed1651;	
+	line-height: 34px;
+}
+#accountOrdHistory {
+	margin-top: 15px;
+}
