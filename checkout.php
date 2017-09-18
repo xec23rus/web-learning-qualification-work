@@ -27,7 +27,7 @@
 			<div id="mainForm">
 				<form id="orderForm" action="" method="post"> <!-- style="display: none;" -->
 					<div class="outItem">
-						<div data-outItemName="contacts" onclick="toggleX(event);">
+						<div data-outItemName="contacts" class="OINameOpen" onclick="toggleX('contacts');">
 							<h2><span>1.</span> Контактная информация</h2>
 						</div>
 						<div data-outItemData="contacts">
@@ -54,7 +54,7 @@
 					</div>
 					<div id="firstLine"></div>
 					<div class="outItem">
-						<div data-outItemName="deliveryInfo" onclick="toggleX(event);">
+						<div data-outItemName="deliveryInfo" class="OINameClose" onclick="toggleX('deliveryInfo');">
 							<h2><span>2.</span> Информация о доставке</h2>
 						</div>
 						<div data-outItemData="deliveryInfo" style="display: none;">
@@ -91,7 +91,7 @@
 					</div>
 					<div id="secLine"></div>
 					<div class="outItem">
-						<div data-outItemName="confirm" onclick="toggleX(event);">
+						<div data-outItemName="confirm" class="OINameClose" onclick="toggleX('confirm');">
 							<h2><span>3.</span> Подтверждение заказа</h2>
 						</div>
 						<div data-outItemData="confirm" style="display: none;">

@@ -62,29 +62,50 @@ function show(el) {
 }
 
 function toggleX(el) {
-	if (event.path[0].dataset.outitemname) {
+	/*if (event.path[0].dataset.outitemname) {
 		dt = event.path[0].dataset.outitemname;
 	} else if (event.path[1].dataset.outitemname) {
 		dt = event.path[1].dataset.outitemname;
 	} else if (event.path[2].dataset.outitemname) {
 		dt = event.path[2].dataset.outitemname;
-	};
+	};*/
 	
-	elem = document.querySelector('[data-outItemData="'+dt+'"]');
+	elem = document.querySelector('[data-outItemData="'+el+'"]');
 	toggle(elem);
+	elem = document.querySelector('[data-outItemName="'+el+'"]');
+	toggleClass(elem, 'OINameOpen', 'OINameClose');
 }
 
 function nextstep(stp) {
 	if (stp == 1) {
 		hid_el = document.querySelector('[data-outItemData="contacts"]');
+		chClElCl = document.querySelector('[data-outItemName="contacts"]');
 		shw_el = document.querySelector('[data-outItemData="deliveryInfo"]');
+		chClElOp = document.querySelector('[data-outItemName="deliveryInfo"]');
 	} else if (stp == 2) {
 		hid_el = document.querySelector('[data-outItemData="deliveryInfo"]');
-		shw_el = document.querySelector('[data-outItemData="confirm"]');		
+		chClElCl = document.querySelector('[data-outItemName="deliveryInfo"]');
+		shw_el = document.querySelector('[data-outItemData="confirm"]');
+		chClElOp = document.querySelector('[data-outItemName="confirm"]');		
 	} else if (stp == 3) {
 		hid_el = document.getElementById('orderForm');
 		shw_el = document.getElementById('confirmation');		
 	};
 	hide(hid_el);
+	setClass(chClElCl, 'OINameClose');
 	show(shw_el);
+	setClass(chClElOp, 'OINameOpen');
 };
+
+function toggleClass(el, cl1, cl2) {
+	console.log(el);
+	isClass(el, cl1) ? setClass(el, cl2) : setClass(el, cl1)
+};
+
+function isClass(el, cl) {
+	return el.className == cl ? true : false
+}
+
+function setClass(el, cl) {
+	el.className = cl;
+}

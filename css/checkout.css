@@ -2,7 +2,7 @@
 h2 {
 	font-size: 24px;
 	font-weight: 700;
-	color: #000;
+	/*color: #000;*/
 }
 h2 span {
 	color: #ed1651;
@@ -14,9 +14,15 @@ h2 span {
 [data-outItemName] {
 	width: 100%;
 	height: 78px;
-	color: #fff;
-	background-color: #222429;
 }
+.OINameOpen {
+	color: #fff;
+	background-color: #222429;	
+}
+.OINameClose {
+	color: #000;
+	background-color: #fff;
+} 
 [data-outItemData] {
 	padding-left: 30px;
 	position: relative;
