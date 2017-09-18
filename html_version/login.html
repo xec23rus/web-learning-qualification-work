@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Спорт Маг</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<link rel="stylesheet" type="text/css" href="css/autent.css">
+
+<script>
+	function getXmlHttp(){
+		var xmlhttp;
+		try {
+			xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");
+		} catch (e) {
+			try {
+				xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+			} catch (E) {
+				xmlhttp = false;
+			}
+		}
+		if (!xmlhttp && typeof XMLHttpRequest!='undefined') {
+			xmlhttp = new XMLHttpRequest();
+		}
+		return xmlhttp;
+	}
+
+	function login() {
+		// создаем объект для запроса к серверу
+		var req = getXmlHttp()  
+       
+        // (2)
+		// span рядом с кнопкой
+		// в нем будем отображать ход выполнения
+		//var statusElem = document.getElementById('login_status') 
+	
+		//берем значение поля с мылом
+		var mail = document.getElementById('mail').value;
+		var pass = document.getElementById('pass').value;
+		//alert(new_mail);
+	
+		req.onreadystatechange = function() {  
+	        // onreadystatechange активируется при получении ответа сервера
+
+			if (req.readyState == 4) { 
+	            // если запрос закончил выполняться
+
+				//statusElem.innerHTML = req.statusText; // показать статус (Not Found, ОК..)
+
+				if(req.status == 200) { 
+	                 // если статус 200 (ОК) - выдать ответ пользователю
+					//alert("Ответ сервера: "+req.responseText);
+					//проверим результат
+					if(req.responseText == '0') {
+						//document.getElementById('res').innerHTML='Пользователь с такой почтой не найден!';
+						alert('Пользователь с такой почтой не найден!');
+					}
+					else if (req.responseText == '-1') {
+						//document.getElementById('res').innerHTML='Пароль не подходит!';
+						alert('Пароль не подходит!');
+					}
+					else if (req.responseText == '-999') {
+						//document.getElementById('res').innerHTML='Упс, что-то пошло не так!';
+						alert('Упс, что-то пошло не так!');
+					} 
+					else {
+						//document.getElementById('res').innerHTML='Добро пожаловать!';
+						alert('Добро пожаловать!');
+					}
+				}
+				// тут можно добавить else с обработкой ошибок запроса
+			}
+
+		}
+
+	       // (3) задать адрес подключения
+		req.open('GET', '/diplom/php/check_login.php?mail='+mail+'&pass='+pass, true);  
+
+		// объект запроса подготовлен: указан адрес и создана функция onreadystatechange
+		// для обработки ответа сервера
+	 
+	        // (4)
+		req.send(null);  // отослать запрос
+  
+	        // (5)
+		//statusElem.innerHTML = 'Ожидаю ответа сервера...' 
+	}
+
+</script>
+
+</head>
+<body>
+	<div id="wrp">
+		<div id="head">
+			<div id="logo">
+				<a class="refBox" name="top" href="index.html"><h1>SPORT <span>SHOP</span></h1></a>
+			</div>
+			<div id="menu">
+				<ul id="nav">
+					<li><a class="refBox" href="category.html">КАТЕГОРИЯ 1</a></li>
+					<li><a class="refBox" href="category.html">КАТЕГОРИЯ 2</a></li>
+					<li><a class="refBox" href="category.html">КАТЕГОРИЯ 3</a></li>
+					<li><a class="refBox" href="category.html">КАТЕГОРИЯ 4</a></li>
+				</ul>
+				<ul id="usr">
+					<li><a href="reg.html">Регистрация</a></li>
+					<li> <img src="img/usr_icon.png" align="left"> <a class="ent" href="#">Войти</a></li>
+				</ul>
+			</div>
+			<div id="line"></div>
+			<div id="cart">
+				<img id="cart_img" src="img/cart.png">
+				<a class="refBox" href="cart.html"></a>
+				<p id="cart_sum">43 275 <span>руб.</span></p>
+				<p id="cart_item">2 предмета</p>
+				
+			</div>
+			<div id="winName">
+				Вход
+			</div>
+		</div>
+		<div id="body">
+			<div id="mainForm">
+				<div id="loginForm">
+					<form action="index.php" method="post">
+						<h3>Зарегистрированный пользователь</h3>
+						<p class="loginDsc">Email адрес:</p>
+						<input class="loginField" id="mail" type="Email" name="email" autofocus required autocomplete="on" pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})" title="name@domain.com" placeholder="E-mail">
+						<p class="loginDsc">Пароль:</p>
+						<input class="loginField" id="pass" type="password" name="pas" required>
+						<input id="loginBtn" type="submit" value="Войти" onclick="login()">
+						<a href="#">Забыли пароль?</a>
+					</form>
+				</div>
+				<div id="regForm">
+					<h3>Новый пользователь</h3>
+					<form action="reg.html" method="post">
+						<input id="regBtn" class="redBtn" type="submit" value="Зарегистрироваться">
+					</form>
+				</div>
+			</div>
+		</div>
+		<div id="footer">
+			<p>Шаблон для экзаменационного задания.<br>
+			Разработан специально для «Всероссийской Школы Программирования»<br>
+			http://bedev.ru/</p>
+			<a href="#top">Наверх <img src="img/up.png"></a>
+		</div>
+		<div id="footerNull"></div>
+	</div>
+</body>
+</html>

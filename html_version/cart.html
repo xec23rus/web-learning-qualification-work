@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Спорт Маг</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<link rel="stylesheet" type="text/css" href="css/cart.css">
+</head>
+<body>
+	<div id="wrp">
+		<div id="head">
+			<div id="logo">
+				<a class="refBox" name="top" href="index.html"><h1>SPORT <span>SHOP</span></h1></a>
+			</div>
+			<div id="menu">
+				<ul id="nav">
+					<li><a class="refBox" href="category.html">КАТЕГОРИЯ 1</a></li>
+					<li><a class="refBox" href="category.html">КАТЕГОРИЯ 2</a></li>
+					<li><a class="refBox" href="category.html">КАТЕГОРИЯ 3</a></li>
+					<li><a class="refBox" href="category.html">КАТЕГОРИЯ 4</a></li>
+				</ul>
+				<ul id="usr">
+					<li><a href="reg.html">Регистрация</a></li>
+					<li> <img src="img/usr_icon.png" align="left"> <a class="ent" href="login.html">Войти</a></li>
+				</ul>
+			</div>
+			<div id="line"></div>
+			<div id="cart">
+				<img id="cart_img" src="img/cart.png">
+				<!--<a class="refBox" href="#"></a> нужна ли ссылка на корзину в корзине?-->
+				<p id="cart_sum">43 275 <span>руб.</span></p>
+				<p id="cart_item">2 предмета</p>
+				
+			</div>
+			<div id="winName">
+				Корзина
+			</div>
+		</div>
+		<div id="body">
+			<div id="mainForm">
+				<div id="cartListProd">
+					<table>
+						<tr id="cartListTitle">
+							<td id="cartListTitleProd" colspan="2">Товар</td>
+							<td align="center">Доступность</td>
+							<td align="right">Стоимость</td>
+							<td align="center">Количество</td>
+							<td align="center">Итого</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td class="cartListImg"><img src="img/product.jpg" width="100%"></td>
+							<td class="cartListName">ВАЗ 2106</td>
+							<td class="cartListPos" align="center">Есть в наличии</td>
+							<td class="cartListPrice" align="right">61 120<span>руб.</span></td>
+							<td class="cartListCount" align="center">
+								<div class="cartListCountChange">
+									<div class="cartListCountMinus">-</div>
+									<div class="cartListCountRes">1</div>
+									<div class="cartListCountPlus">+</div>
+								</div>
+							</td>
+							<td class="cartListSum" align="center">61 120<span>руб.</span></td>
+							<td class="cartListDel" align="center"><img src="img/remove.png"></td>
+						</tr>	
+						<tr>
+							<td class="cartListImg"><img src="img/product.jpg" width="100%"></td>
+							<td class="cartListName">Велосипед</td>
+							<td class="cartListPos" align="center">Есть в наличии</td>
+							<td class="cartListPrice" align="right">6 120<span>руб.</span></td>
+							<td class="cartListCount" align="center">
+								<div class="cartListCountChange">
+									<div class="cartListCountMinus">-</div>
+									<div class="cartListCountRes">1</div>
+									<div class="cartListCountPlus">+</div>
+								</div>
+							</td>
+							<td class="cartListSum" align="center">6 120<span>руб.</span></td>
+							<td class="cartListDel" align="center"><img src="img/remove.png"></td>
+						</tr>	
+						<tr>
+							<td class="cartListImg"><img src="img/product.jpg" width="100%"></td>
+							<td class="cartListName">Хлеба булочка</td>
+							<td class="cartListPos" align="center">Есть в наличии</td>
+							<td class="cartListPrice" align="right">68 120<span>руб.</span></td>
+							<td class="cartListCount" align="center">
+								<div class="cartListCountChange">
+									<div class="cartListCountMinus">-</div>
+									<div class="cartListCountRes">1</div>
+									<div class="cartListCountPlus">+</div>
+								</div>
+							</td>
+							<td class="cartListSum" align="center">68 120<span>руб.</span></td>
+							<td class="cartListDel" align="center"><img src="img/remove.png"></td>
+						</tr>	
+						<tr>
+							<td class="cartListImg"><img src="img/product.jpg" width="100%"></td>
+							<td class="cartListName">Соль</td>
+							<td class="cartListPos" align="center">Есть в наличии</td>
+							<td class="cartListPrice" align="right">20<span>руб.</span></td>
+							<td class="cartListCount" align="center">
+								<div class="cartListCountChange">
+									<div class="cartListCountMinus">-</div>
+									<div class="cartListCountRes">1</div>
+									<div class="cartListCountPlus">+</div>
+								</div>
+							</td>
+							<td class="cartListSum" align="center">20<span>руб.</span></td>
+							<td class="cartListDel" align="center"><img src="img/remove.png"></td>
+						</tr>																
+					</table>
+				</div>
+				<div id="cartMan">
+					<div id="cartBack">
+						<!-- ссылка на ту страницу, с которой пришли в корзину -->
+						<a href="index.html"><button id="outBackBtn">Вернуться к покупкам</button></a> 
+					</div>
+					<div id="cartOut">
+						<table>
+							<tr>
+								<td>Итого:</td>
+								<td id="cartResSum" align="right">65 019руб.</td>
+							</tr>
+						</table>
+						<a href="checkout.html"><button id="outBtn" class="redBtn" type="submit">Оформить заказ</button></a>
+					</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="footer">
+			<p>Шаблон для экзаменационного задания.<br>
+			Разработан специально для «Всероссийской Школы Программирования»<br>
+			http://bedev.ru/</p>
+			<a href="#top">Наверх <img src="img/up.png"></a>
+		</div>
+		<div id="footerNull"></div>
+	</div>
+</body>
+</html>

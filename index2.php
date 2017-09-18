@@ -1,3 +1,7 @@
+<?php
+ session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,39 +9,31 @@
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="css/common.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<script src="js/common.js"></script>
+
+	<?php include 'php/main_product_list.php' ?>
+
 </head>
-<body>
+<body onload="update_cart_attr();">
+
+<?php
+	include_once 'php/login_out.php'; /*check $_POST['email'], $_POST['pas'] for login; 
+											  $_GET['logout'] for logout;
+											  use: $_SESSION['supermagName'] (email), $_SESSION['supermagId']
+										*/
+?>
+
 <div id="wrp">
 	<div id="head">
-		<div id="logo">
-			<a class="refBox" name="top" href="index.html"><h1>SPORT <span>SHOP</span></h1></a>
-		</div>
-		<div id="menu">
-			<ul id="nav">
-				<li><a class="refBox" href="category.html">КАТЕГОРИЯ 1</a></li>
-				<li><a class="refBox" href="category.html">КАТЕГОРИЯ 2</a></li>
-				<li><a class="refBox" href="category.html">КАТЕГОРИЯ 3</a></li>
-				<li><a class="refBox" href="category.html">КАТЕГОРИЯ 4</a></li>
-			</ul>
-			<ul id="usr">
-				<li><a href="reg.html">Регистрация</a></li>
-				<li> <img src="img/usr_icon.png" align="left"> <a class="ent" href="login.html">Войти</a></li>
-			</ul>
-		</div>
-		<div id="line"></div>
-		<div id="cart">
-			<img id="cart_img" src="img/cart.png">
-			<a class="refBox" href="cart.html"></a>
-			<p id="cart_sum">43 275 <span>руб.</span></p>
-			<p id="cart_item">2 предмета</p>
-			
-		</div>
+
+		<?php include_once 'php/header.php' ?>
+
 		<div id="promo">
 			<p id="promo_name">Дельта-14В</p>
 			<p id="promo_type">Мопед</p>
 			<p id="promo_desc">Отличный мопед с мощностью в 0.01 ЛС!</p>
 			<div id="promoRef">
-				<a class="refBox" href="#">Посмотреть  +</a>
+				<a class="refBox" href="product.php?id=1">Посмотреть  +</a>
 			</div>
 		</div>
 	</div>
@@ -53,7 +49,24 @@
 				</div>
 			</div>
 			<div id="NewProdList">
-				<div data-NewProdItem="1">
+<?php
+				if ($newProds) { 
+					foreach ($newProds as $newKey => $nProd) {
+						$nProdKey = $newKey + 1;
+						if ($nProdKey==9) {
+							break;
+						}
+						echo '<div data-NewProdItem="'.$nProdKey.'">';
+						echo '	<div class="ProdImg" style="background-image: url(img/products/'.$nProd['up'].'/'.$nProd['picture'].'"></div>';
+						echo '	<div class="ProdName">'.$nProd['name'].'</div>';
+						echo '	<div class="ProdPrice">'.$nProd['price'].'<span>руб.</span></div>';
+						echo '	<a class="refBox" href="product.php?id='.$nProd['n'].'"></a>';
+						echo '	<div class="NewLabel">NEW</div>';
+					  	echo '</div>';
+					} 
+					/*echo '<div id="newProdStat" data-sProdNext="'.$nProdKey.'"></div>';*/
+				}
+				/*<div data-NewProdItem="1">
 					<div class="ProdImg"><img src="img/product.jpg"></div>
 					<div class="ProdName">Название товара</div>
 					<div class="ProdPrice">7 258<span>руб.</span></div>
@@ -102,7 +115,8 @@
 					<div class="ProdName">Название товара</div>
 					<div class="ProdPrice">7 258<span>руб.</span></div>
 					<a class="refBox" href="#"></a>
-				</div>
+				</div>*/
+?>			
 			</div>
 		</div>
 		<div id="promoProdList">
@@ -142,7 +156,24 @@
 				</div>				
 			</div>
 			<div id="topProdList">
-				<div data-topProdItem="1">
+<?php
+				if ($hotProds) { 
+					foreach ($hotProds as $hotKey => $hProd) {
+						$hProdKey = $hotKey + 1;
+						if ($hProdKey==5) {
+							break;
+						}
+						echo '<div data-topProdItem="'.$hProdKey.'">';
+						echo '	<div class="ProdImg" style="background-image: url(img/products/'.$hProd['up'].'/'.$hProd['picture'].'"></div>';
+						echo '	<div class="ProdName">'.$hProd['name'].'</div>';
+						echo '	<div class="ProdPrice">'.$hProd['price'].'<span>руб.</span></div>';
+						echo '	<a class="refBox" href="product.php?id='.$hProd['n'].'"></a>';
+						echo '	<div class="HotLabel">HOT</div>';
+					  	echo '</div>';
+					} 
+					/*echo '<div id="newProdStat" data-sProdNext="'.$nProdKey.'"></div>';*/
+				}
+				/*<div data-topProdItem="1">
 					<div class="ProdImg"><img src="img/product.jpg"></div>
 					<div class="ProdName">Название товара</div>
 					<div class="ProdPrice">7 258<span>руб.</span></div>
@@ -167,7 +198,8 @@
 					<div class="ProdName">Название товара</div>
 					<div class="ProdPrice">7 258<span>руб.</span></div>
 					<a class="refBox" href="#"></a>					
-				</div>												
+				</div>	*/
+?>								
 			</div>
 		</div>
 		<div id="about">
@@ -183,5 +215,9 @@
 		</div>
 	</div>
 </div>
+<?php
+/*echo '<br> Номер сессии = ' . $_SESSION['supermagId'];
+echo '<br> mail = '. $_POST['email'];*/
+?>
 </body>
 </html>
