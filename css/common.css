@@ -1,6 +1,9 @@
 @import url(reset.css);
 @import url(fonts.css);
 
+.visHid{
+	visibility: hidden;
+}
 .clear {
 	clear: both;
 }
@@ -11,6 +14,13 @@
 	text-decoration: none;
 	text-align: center;
 }
+.NavBtn {
+   	width: 13px;
+ 	height: 17px;
+ 	position: absolute;	
+ 	top: 32px;	
+ 	cursor: pointer;
+ }
 #wrp {
 	width: 1400px;
 	outline: 0px solid #000000;
@@ -129,6 +139,10 @@
  	border-bottom: 1px dashed #ed1651;
  	color: #ed1651;
  }
+
+   #usr li a.noBorder {
+  	border: none;
+  }
  /*		корзина		*/
  #cart {
  	width: 188px;
@@ -256,6 +270,12 @@
 	width: 291px;
 	height: 322px;
 	position: relative;
+	float: left;
+	border-right: 2px solid #f6f6f6;
+	border-bottom: 2px solid #f6f6f6;
+}
+[data-product="4"], [data-product="8"], [data-product="12"], [data-product="16"], [data-product="20"], [data-product="24"] {
+	border-right: 0px;
 }
 [data-product] a {
 	opacity: 0;
@@ -266,6 +286,9 @@
 	width: 291px;
 	height: 235px;
 	position: absolute;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
 }
 .ProdName {
 	margin: 30px 0 0 31px;
@@ -273,6 +296,7 @@
 	top: 235px;
 	font-size: 14px;
 	color: #555555;
+	width: 140px;
 }
 .ProdPrice {
 	margin: 30px 31px 0 0;
@@ -326,4 +350,25 @@
  	font-weight: 700;
  	color: #fff;
  	padding: 6px 0 0 5px;
+ }
+ .disable {
+ 	display: none;
+ }
+
+ /*панелькт с навигацией по продуктам*/
+.ProdNav {
+	height: 76px;
+	position: relative;
+}
+.ProdNav p {
+ 	font-size: 24px;
+ 	font-weight: 400;
+ 	color: #021562;
+ 	padding: 23px 0 0 29px;
+ }
+ .ProdNavRight {
+ 	right: 30px;
+ }
+ .ProdNavLeft {
+ 	right: 54px;	
  }

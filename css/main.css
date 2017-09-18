@@ -79,12 +79,12 @@
  	color: #021562;
  	margin: 23px 0 0 29px;
  }
- .NavBtn {
+ /*.NavBtn {
    	width: 13px;
  	height: 17px;
  	position: absolute;	
  	top: 32px;	
- }
+ }*/
  #newNavRight, #topNavRight {
  	right: 30px;
  }
@@ -188,9 +188,9 @@
  	background-color: #fff;
  	box-shadow: 0 1px 3px rgba(0,0,0,0.12);	
 }
-#topProdNav {
+/*#topProdNav {
 	height: 76px;
-}
+}*/
 #topProdTitle {
 	position: absolute;
 	top: 23px;
