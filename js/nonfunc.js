@@ -98,14 +98,29 @@ function nextstep(stp) {
 };
 
 function toggleClass(el, cl1, cl2) {
-	console.log(el);
+	//console.log(el);
 	isClass(el, cl1) ? setClass(el, cl2) : setClass(el, cl1)
 };
 
 function isClass(el, cl) {
 	return el.className == cl ? true : false
-}
+};
 
 function setClass(el, cl) {
 	el.className = cl;
-}
+};
+
+function radioCopy(el) {
+	var delivTypes = document.querySelectorAll('[data-deliveryType]');
+
+	for (var i = 0; i < delivTypes.length; i++) {
+		if (delivTypes[i].dataset.deliverytype != el.value) {hide(delivTypes[i]);} else {show(delivTypes[i]);};
+	}	
+};
+
+function copyHTML(val, selec) {
+	var elemList = document.querySelectorAll(selec);
+	for (var i = 0; i < elemList.length; i++) {
+		elemList[i].innerHTML = val;
+	};	
+};

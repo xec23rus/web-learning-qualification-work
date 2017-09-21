@@ -10,7 +10,9 @@
 	<link rel="stylesheet" type="text/css" href="css/common.css">
 	<link rel="stylesheet" type="text/css" href="css/checkout.css">
 	<script src="js/common.js"></script>
-	<script src="js/nonfunc.js"></script>	
+	<script src="js/nonfunc.js"></script>
+
+	<?php include_once 'php/person_info.php' ?>	
 	
 </head>
 <body>
@@ -32,16 +34,16 @@
 						</div>
 						<div data-outItemData="contacts">
 							<div class="outUser">
-								<h3>Для новых покупателей</h3>
+								<!-- <h3>Для новых покупателей</h3> -->
 								<h4>Контактное лицо (ФИО):</h4>
-								<input class="outUserField" type="text" name="userName" autofocus>
+								<input class="outUserField" type="text" name="userName" autofocus value=<?php echo '"'.$fio.'"'; ?>>
 								<h4>Контактный телефон:</h4>
-								<input class="outUserField" type="text" name="userPhone">
+								<input class="outUserField" type="text" name="userPhone" value=<?php echo '"'.$phone.'"'; ?>>
 								<h4>E-mail:</h4>
-								<input class="outUserField" type="Email" name="newEmail" autocomplete="on" pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})" title="name@domain.com" placeholder="E-mail">
+								<input class="outUserField" type="Email" name="newEmail" value=<?php echo '"'.$mail.'"'; ?> autocomplete="on" pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})" title="name@domain.com" placeholder="E-mail">
 								<input id="next" class="redBtn" type="button" value="Продолжить" onclick="nextstep(1);">
 							</div>
-							<div class="outUser">
+							<!-- <div class="outUser">
 								<h3>Быстрый вход</h3>
 								<h4>Ваш e-mail:</h4>
 								<input class="outUserField" type="Email" name="email" autocomplete="on" pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})" title="name@domain.com" placeholder="E-mail">
@@ -49,7 +51,7 @@
 								<input class="outUserField" type="password" name="pas">
 								<input id="outLogin" class="redBtn" type="button" value="Войти">
 								<a href="#">Восстановить пароль</a>
-							</div>
+							</div> -->
 						</div>
 					</div>
 					<div id="firstLine"></div>
@@ -61,31 +63,31 @@
 							<div id="outDeliveryAddress">
 								<h3>Адрес доставки</h3>
 								<h4>Город:</h4>
-								<input class="outUserField" type="text" name="city">
+								<input class="outUserField" type="text" name="city" value=<?php echo '"'.$city.'"'; ?>>
 								<h4>Улица:</h4>
-								<input class="outUserField" type="text" name="street">
+								<input class="outUserField" type="text" name="street" value=<?php echo '"'.$street.'"'; ?>>
 								<div class="outDeliveryAddressApp">
 									<h4>Дом:</h4>
-									<input class="outAddrField" type="text" name="build">
+									<input class="outAddrField" type="text" name="build" value=<?php echo '"'.$house.'"'; ?>>
 								</div>
 								<div class="outDeliveryAddressApp">
 									<h4>Квартира:</h4>
-									<input class="outAddrField" type="text" name="appartment">
+									<input class="outAddrField" type="text" name="appartment" value=<?php echo '"'.$appartment.'"'; ?>>
 								</div>
 								<input id="next" class="redBtn" type="button" value="Продолжить" onclick="nextstep(2);">
 							</div>
 							<div id="outDeliveryMethod">
 								<h3>Способ доставки</h3>
 								<div id="outDeliveryMethodList">
-									<input type="radio" name="deliveryMethod" value="0" checked><div>Курьерская доставка <br>с оплатой при получении</div>
-									<input type="radio" name="deliveryMethod" value="1"><div>Почта России <br>с наложенным платежом</div>
-									<input type="radio" name="deliveryMethod" value="2"><div>Доставка через терминалы <br>QIWI Post</div>
+									<input type="radio" name="deliveryMethod" value="0" onclick="radioCopy(this);" checked><div>Курьерская доставка <br>с оплатой при получении</div>
+									<input type="radio" name="deliveryMethod" value="1" onclick="radioCopy(this);" ><div>Почта России <br>с наложенным платежом</div>
+									<input type="radio" name="deliveryMethod" value="2" onclick="radioCopy(this);" ><div>Доставка через терминалы <br>QIWI Post</div>
 								</div>
 							</div>
 							<div id="outDeliveryComment">
 								<h3>Комментарий к заказу</h3>
 								<h4>Введите ваш комментарий:</h4>
-								<textarea id="outDeliveryCommentField" name="comment"></textarea>
+								<textarea id="outDeliveryCommentField" name="comment" onblur="copyHTML(this.value, '#delivComm');"></textarea>
 							</div>
 						</div>					
 					</div>
@@ -151,16 +153,16 @@
 										<td id="outDeliveryCol1" colspan="2">Город:</td>
 									</tr>
 									<tr class="outDeliveryData">
-										<td>Имя заказчика</td>
-										<td colspan="2">Москва</td>
+										<td><?php echo $fio; ?></td>
+										<td colspan="2"><?php echo $city; ?></td>
 									</tr>
 									<tr class="outDeliveryTermLight">
 										<td>Контактный телефон:</td>
 										<td colspan="2">Улица:</td>
 									</tr>
 									<tr class="outDeliveryData">
-										<td>+7 916 000-00-00</td>
-										<td colspan="2">Название улицы</td>
+										<td><?php echo $phone; ?></td>
+										<td colspan="2"><?php echo $street; ?></td>
 									</tr>	
 									<tr class="outDeliveryTermLight">
 										<td>E-mail:</td>
@@ -168,16 +170,22 @@
 										<td>Квартира</td>
 									</tr>	
 									<tr class="outDeliveryData">
-										<td>mail@company.ru</td>
-										<td>120</td>
-										<td>2</td>
+										<td><?php echo $mail; ?></td>
+										<td><?php echo $house; ?></td>
+										<td><?php echo $appartment; ?></td>
 									</tr>				
 								</table>
 								<table>
 									<tr class="outDeliveryTermLight"><td>Способ доставки:</td></tr>
-									<tr class="outDeliveryDataSmall"><td>Курьерская доставка с оплатой при получении</td></tr>
+									<tr class="outDeliveryDataSmall">
+										<td>
+											<span data-deliveryType='0'>Курьерская доставка с оплатой при получении</span>
+											<span class="disable" data-deliveryType='1'>Почта России с наложенным платежом</span>
+											<span class="disable" data-deliveryType='2'>Доставка через терминалы QIWI Post</span>
+										</td>
+									</tr>
 									<tr class="outDeliveryTermLight"><td>Комментарий к заказу:</td></tr>
-									<tr class="outDeliveryDataSmall"><td>Текс комментария</td></tr>
+									<tr class="outDeliveryDataSmall"><td id="delivComm">Текс комментария</td></tr>
 								</table>
 								<div class="clear"></div>
 							</div>
